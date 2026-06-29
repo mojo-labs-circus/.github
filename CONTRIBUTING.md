@@ -1,10 +1,10 @@
 # Contributing
 
-mojo-labs-circus is currently a solo project — it's just Clarke building this.
+This is a solo project right now, and I am actively looking for people to build this with me. Whether you want to write code, think through ideas, or just have thoughts about the problem — please reach out: [clarkehines@icloud.com](mailto:clarkehines@icloud.com)
 
-If you want to contribute, get in touch first: [clarkehines@icloud.com](mailto:clarkehines@icloud.com). The project is in early design and things shift frequently, so a quick conversation before writing any code will save you time.
+The [mojo wiki](https://github.com/mojo-labs-circus/mojo/wiki) has the full picture of what we are building and why. Read it first — it will give you the context that makes everything else make sense.
 
-The framework design in the [mojo wiki](https://github.com/mojo-labs-circus/mojo/wiki) is the current source of truth for where things are headed.
+If you want to open an issue or a PR without talking first, that is fine too. The best contributions are focused and minimal, and anything that touches architecture is worth a conversation beforehand so we are not working against each other.
 
 ## Reporting bugs
 
