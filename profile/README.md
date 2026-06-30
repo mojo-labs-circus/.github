@@ -30,6 +30,19 @@ mojo-labs is an effort to build that.
 
 ---
 
+## Roadmap
+
+**Phase 1 — Personal AI + OS** *(in progress)*
+MojOS and mojo-agent, designed and built together. An AI with full system control living inside an OS built for it.
+
+**Phase 2 — Fleet**
+The same agent, coherent across all your machines. Your hardware stops being islands.
+
+**Phase 3 — Collectives**
+Groups of humans, each with their own agent, constituting a formal collective: shared infrastructure, shared goals, AI coordinating across the group as a first-class participant.
+
+---
+
 ## Where this is at
 
 This is one person — early in their career, first-year CS — who has a clear picture of how the future should look and is building toward it. The vision is bigger than the current ability to implement it. That's deliberate: build toward the right thing even if it takes time, rather than build the wrong thing fast.
@@ -47,7 +60,7 @@ If you find this interesting — whether you want to contribute, collaborate, or
 | [dotfiles](https://github.com/mojo-labs-circus/dotfiles) | System dotfiles, deployed by MojOS |
 | [ringmaster](https://github.com/mojo-labs-circus/ringmaster) | Early R&D — superseded by mojo-agent |
 
-The thinking behind everything lives in the [mojo wiki](https://github.com/mojo-labs-circus/mojo/wiki).
+The thinking behind everything is in the [mojo](https://github.com/mojo-labs-circus/mojo) repo.
 
 ---
 
