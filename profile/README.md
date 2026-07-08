@@ -24,7 +24,7 @@ mojo-labs is an effort to build that.
 
 **mojo-agent** — your personal AI. Runs locally on your hardware. Knows your machines, your files, your workflow, your preferences. Accumulates real context about you over time — context that lives on your hardware and nowhere else. It isn't a technical tool for writing code: it's a first mate. It sits between you and the frontier models — Claude, GPT, whatever is best — orchestrating them on your behalf, delegating tasks to them, and stripping your private context before anything leaves your machine. You get access to the best AI in the world without handing your life to it.
 
-**MojOS** — Arch Linux rebuilt around the agent from the ground up. The agent isn't a feature bolted on — it's the primary interface. The OS is designed around it: changes happen in staging, get validated, and only commit once the agent is confident. Full system control. Always safe to undo.
+**MojOS** — NixOS rebuilt around the agent from the ground up. The agent isn't a feature bolted on — it's the primary interface. The OS is designed around it: changes happen in staging, get validated, and only commit once the agent is confident. Full system control. Always safe to undo.
 
 **The Circus** — the infrastructure layer that connects your machines into one system. Your agent follows you across devices as one coherent intelligence, not a separate instance on each machine.
 
@@ -32,7 +32,7 @@ mojo-labs is an effort to build that.
 
 ## Roadmap
 
-**Phase 1 — Personal AI + OS** *(in progress)*
+**Phase 1 — Personal AI + OS** *(currently: defining the Mojo System Interface — the standards document both MojOS and mojo-agent get built against, before either one starts)*
 MojOS and mojo-agent, designed and built together. An AI with full system control living inside an OS built for it.
 
 **Phase 2 — Fleet**
