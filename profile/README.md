@@ -1,9 +1,10 @@
 # mojo-labs
 
-**Mojo is a sovereign personal-AI platform, architected like an operating
-system. It adds Jarvis — your own first mate, an AI that actually knows you —
-and lets it work on your machine on your behalf. Scales from one machine, to
-your fleet, to Collectives of people and AIs working together.**
+**Mojo is the sovereign layer beneath your AI, not the agent itself. It's
+Jarvis: your memory and your permissions, yours alone, carried into whatever
+agent or model is actually doing the thinking — swap either and nothing
+moves. Scales from one machine, to your fleet, to Collectives of people and
+AIs working together.**
 
 ## A vision of the future
 
@@ -27,19 +28,32 @@ mojo-labs is an effort to build that.
 
 ---
 
-## mojo-agent — Jarvis itself
+## Jarvis — the first mate
 
-Your personal AI, running locally on your hardware. Knows your machines, your files, your workflow, your preferences. Accumulates real context about you over time — context that lives on your hardware and nowhere else. It isn't a technical tool for writing code: it's a first mate. It sits between you and the frontier models — Claude, GPT, whatever is best — orchestrating them on your behalf, delegating tasks to them, and stripping your private context before anything leaves your machine. You get access to the best AI in the world without handing your life to it.
+Jarvis is Mojo's core claim, not a specific piece of software: a persistent AI
+identity — memory and permissions — that lives on your own hardware and gets
+handed fresh to whatever agent or model is actually doing the thinking. Swap
+the agent, swap the model, and Jarvis doesn't move: nothing that matters ever
+lived inside either one. It sits between you and the frontier models — Claude,
+GPT, whatever is best — hiring them for a task at a time and stripping your
+private context before anything leaves your machine. You get access to the
+best AI in the world without handing it your life.
 
-It has computer use: it can see the screen, drive applications, manage files, install packages, and control the desktop. And it follows you across every device you own as one coherent intelligence — your fleet, not a separate instance per machine.
+[mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) is one reference
+agent Mojo can run — not the only one, and not what Jarvis actually is.
+Anything that speaks the standard can plug in and pick up the same identity,
+the same memory, the same permissions, on any machine you own.
 
 ## MojOS — the OS
 
-NixOS rebuilt around the agent from the ground up. The agent isn't a feature bolted on — it's built in from the start. The entire system is declared in one flake; every change happens in staging, gets validated, and only commits once the agent is confident. Full system control that can't quietly break your machine.
+Mojo runs on any Unix system — that reach is the point. MojOS is the deepest
+host: NixOS plus Mojo's own opinionated defaults, the whole machine
+declarative and always safe to undo, every change staged and validated
+before it commits. Best home, not a requirement.
 
-Keeping everything on the system protected — your personal files included — is a goal of Mojo as a whole. Which layer actually guarantees that, and whether it needs MojOS specifically or works the same on any Unix system, is still being worked out as part of the Mojo System Interface.
-
-It's also a workshop with moods: switchable modes that change how the system looks, behaves, and how much of it shows — a dense coding mode, a warm creative mode, a plain-looking mode for when other people are around.
+It's also a workshop with its own personality: modes that change how the
+system looks and feels — dense and technical for deep work, plain and quiet
+for when other people are around.
 
 ## Collectives
 
@@ -91,7 +105,7 @@ If you find this interesting — whether you want to contribute, collaborate, or
 |---|---|
 | [mojo](https://github.com/mojo-labs-circus/mojo) | The thinking — vision, philosophy, the Mojo System Interface |
 | [mojos](https://github.com/mojo-labs-circus/mojos) | MojOS — the OS |
-| [mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) | Jarvis — the agent |
+| [mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) | A reference agent for Mojo — one candidate, not the only one |
 | [dotfiles](https://github.com/mojo-labs-circus/dotfiles) | System dotfiles, deployed by MojOS |
 | [ringmaster](https://github.com/mojo-labs-circus/ringmaster) | Early R&D — superseded by mojo-agent |
 
