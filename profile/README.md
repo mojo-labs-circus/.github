@@ -37,6 +37,8 @@ It has computer use: it can see the screen, drive applications, manage files, in
 
 NixOS rebuilt around the agent from the ground up. The agent isn't a feature bolted on — it's built in from the start. The entire system is declared in one flake; every change happens in staging, gets validated, and only commits once the agent is confident. Full system control that can't quietly break your machine.
 
+Keeping everything on the system protected — your personal files included — is a goal of Mojo as a whole. Which layer actually guarantees that, and whether it needs MojOS specifically or works the same on any Unix system, is still being worked out as part of the Mojo System Interface.
+
 It's also a workshop with moods: switchable modes that change how the system looks, behaves, and how much of it shows — a dense coding mode, a warm creative mode, a plain-looking mode for when other people are around.
 
 ## Collectives
@@ -51,8 +53,8 @@ This isn't just a product idea. A real, converging body of academic work — Hyb
 
 Mojo is designed the way an operating system is designed, not improvised by
 wrapping existing AI tools together. Before any code ships, the system itself
-gets defined: the **Mojo System Interface** — a POSIX-style standards
-document, worked out piece by piece and checked against real precedent (Unix,
+gets defined: the **Mojo System Interface** — effectively Mojo's own
+POSIX — worked out piece by piece and checked against real precedent (Unix,
 seL4, Plan 9, Erlang/OTP) before anything gets built against it. The thinking
 behind this is public, in the [mojo](https://github.com/mojo-labs-circus/mojo)
 repo.
@@ -60,11 +62,6 @@ repo.
 ---
 
 ## Roadmap
-
-Three stages, not a list of separate projects: define the Mojo System
-Interface, build Mojo (Mk1) against it, then iterate. Multi-machine use,
-chartering, and Collectives aren't things bolted on after Mojo exists — they're
-capabilities of the one system, realized as it matures through iteration.
 
 **Now — the Mojo System Interface, Mk1.** The system itself, defined properly,
 piece by piece, checked against real precedent. No running software yet — a
