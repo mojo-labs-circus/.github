@@ -27,15 +27,27 @@ mojo-labs is an effort to build that.
 
 ---
 
-## What we're building
+## mojo-agent — Jarvis itself
 
-**mojo-agent** — Jarvis itself. Your personal AI, running locally on your hardware. Knows your machines, your files, your workflow, your preferences. Accumulates real context about you over time — context that lives on your hardware and nowhere else. It isn't a technical tool for writing code: it's a first mate. It sits between you and the frontier models — Claude, GPT, whatever is best — orchestrating them on your behalf, delegating tasks to them, and stripping your private context before anything leaves your machine. You get access to the best AI in the world without handing your life to it.
+Your personal AI, running locally on your hardware. Knows your machines, your files, your workflow, your preferences. Accumulates real context about you over time — context that lives on your hardware and nowhere else. It isn't a technical tool for writing code: it's a first mate. It sits between you and the frontier models — Claude, GPT, whatever is best — orchestrating them on your behalf, delegating tasks to them, and stripping your private context before anything leaves your machine. You get access to the best AI in the world without handing your life to it.
 
-**MojOS** — NixOS rebuilt around the agent from the ground up. The agent isn't a feature bolted on — it's built in from the start. The OS is designed around it: changes happen in staging, get validated, and only commit once the agent is confident. Full system control. Always safe to undo.
+It has computer use: it can see the screen, drive applications, manage files, install packages, and control the desktop.
 
-**The Circus** — the infrastructure layer that connects your machines into one system. Your agent follows you across devices as one coherent intelligence, not a separate instance on each machine.
+## MojOS — the OS
 
-**Collectives** — the group itself, made a first-class system. Detailed below.
+NixOS rebuilt around the agent from the ground up. The agent isn't a feature bolted on — it's built in from the start. The entire system is declared in one flake; every change happens in staging, gets validated, and only commits once the agent is confident. Full system control that can't quietly break your machine.
+
+It's also a workshop with moods: switchable modes that change how the system looks, behaves, and how much of it shows — a dense coding mode, a warm creative mode, a plain-looking mode for when other people are around.
+
+## The Circus — one intelligence across your machines
+
+Your agent follows you across devices as one coherent intelligence, not a separate instance on each machine. The infrastructure layer that connects your machines into one system, so your hardware stops being islands.
+
+## Collectives
+
+Right now, when people work together, each person brings their own separate AI tool, and coordination happens despite that fragmentation, not through it. Collectives makes the group itself — people and their AIs together — one coherent system: shared goals, explicit structure, AI as a full participant with real standing, always accountable back to a person.
+
+This isn't just a product idea. A real, converging body of academic work — Hybrid Intelligence, Hybrid Intelligence Teams, COHUMAIN, and legal theory on treating human-AI "hybrids" as their own accountable entity — has been arguing the group is the right unit of analysis since 2019. Nobody's built the system that treats it as one. That's what Collectives is. Full lineage in [collective-intelligence-research.md](https://github.com/mojo-labs-circus/mojo/blob/main/collective-intelligence-research.md).
 
 ---
 
@@ -51,33 +63,21 @@ repo.
 
 ---
 
-## Collectives
-
-Right now, when people work together, each person brings their own separate AI
-tool, and coordination happens despite that fragmentation, not through it.
-Collectives makes the group itself — people and their AIs together — one
-coherent system: shared goals, explicit structure, AI as a full participant
-with real standing, always accountable back to a person.
-
-This isn't just a product idea. A real, converging body of academic work —
-Hybrid Intelligence, Hybrid Intelligence Teams, COHUMAIN, and legal theory on
-treating human-AI "hybrids" as their own accountable entity — has been arguing
-the group is the right unit of analysis since 2019. Nobody's built the system
-that treats it as one. That's what Collectives is. Full lineage in
-[collective-intelligence-research.md](https://github.com/mojo-labs-circus/mojo/blob/main/collective-intelligence-research.md).
-
----
-
 ## Roadmap
 
-**Phase 1 — Personal AI + OS** *(currently: defining the Mojo System Interface — the standards document both MojOS and mojo-agent get built against, before either one starts)*
-MojOS and mojo-agent, designed and built together. An AI with full system control living inside an OS built for it.
+**Now — defining the Mojo System Interface.** Before either MojOS or
+mojo-agent gets built, the system itself gets defined properly, piece by
+piece, checked against real precedent. No running software yet — a deliberate
+tradeoff, not an oversight.
 
-**Phase 2 — Fleet**
-The same agent, coherent across all your machines. Your hardware stops being islands.
+**Next — Mk1, built and lived with.** MojOS and mojo-agent, built together
+against that standard, dogfooded as a daily driver.
 
-**Phase 3 — Collectives**
-Groups of people, each with their own agent, constituting a formal collective: shared infrastructure, shared goals, AI coordinating across the group as a first-class participant.
+**Horizon.** The Circus, once there's more than one machine to connect.
+Chartering — borrowing more compute than you own, without ever giving up
+sovereignty over what it's shown. Collectives, once the individual layer is
+real. The full detail lives in
+[roadmap.md](https://github.com/mojo-labs-circus/mojo/blob/main/roadmap.md).
 
 ---
 
@@ -103,12 +103,14 @@ If you find this interesting — whether you want to contribute, collaborate, or
 
 ## Philosophy
 
-**Sovereignty is an axiom, not a feature.** At any point in the system you should be able to ask "who owns this data?" and get an unambiguous answer. If the answer is unclear, the design is wrong.
+Sovereignty as an axiom, not a feature. Open source by necessity — the only
+way "this is yours" is credible. Privacy by architecture, not policy. And
+technical users are the start, not the destination — the agent exists to
+lower that barrier over time, not keep it high.
 
-**Open source by necessity.** An AI that shapes how you work over a lifetime, running on closed source software, is not an AI you actually own. The only way "this is yours" is credible is if anyone can read, audit, and verify it.
+Full philosophy, with the reasoning behind each:
+[philosophy.md](https://github.com/mojo-labs-circus/mojo/blob/main/philosophy.md).
 
-**Privacy by architecture, not policy.** A privacy policy is a promise. Architecture is a guarantee.
-
-**The technical users are the start, not the destination.** Right now this requires someone who knows Linux. Over time the agent lowers the barrier until owning your AI is the path of least resistance, not the hard path.
+---
 
 Code: [AGPL-3.0](https://github.com/mojo-labs-circus/mojos/blob/main/LICENSE) · Docs: [CC BY-SA 4.0](https://github.com/mojo-labs-circus/mojo/blob/main/LICENSE)
