@@ -1,5 +1,10 @@
 # mojo-labs
 
+**Mojo is a sovereign personal-AI platform, architected like an operating
+system. It adds Jarvis — your own first mate, an AI that actually knows you —
+and lets it work on your machine on your behalf. Scales from one machine, to
+your fleet, to Collectives of people and AIs working together.**
+
 ## A vision of the future
 
 This is how I think the future should look: every person has an AI that is genuinely theirs. It lives on hardware in their home, always on. It grows with them over years — learning how they think, how they work, what they value — until it becomes a real extension of themselves. Not a tool they use. A counterpart that knows them. The longer they have it the more valuable it becomes, and it's theirs in the same way their memories are theirs. No company owns it. No subscription can take it away.
@@ -18,15 +23,48 @@ mojo-labs is an effort to build that.
 
 **Context.** Every AI conversation starts from zero. You re-explain who you are, what you're working on, what you've already figured out — every single time. There's no persistent picture of you. A real personal AI fixes this: it carries your context permanently, across every device, and uses it to actually understand you rather than asking you to repeat yourself.
 
+**Fragmentation.** When people work together today, each person brings their own separate AI tool, and coordination happens despite that, not through it. There's no shared system — just individuals, each with their own assistant, hoping it adds up.
+
 ---
 
 ## What we're building
 
-**mojo-agent** — your personal AI. Runs locally on your hardware. Knows your machines, your files, your workflow, your preferences. Accumulates real context about you over time — context that lives on your hardware and nowhere else. It isn't a technical tool for writing code: it's a first mate. It sits between you and the frontier models — Claude, GPT, whatever is best — orchestrating them on your behalf, delegating tasks to them, and stripping your private context before anything leaves your machine. You get access to the best AI in the world without handing your life to it.
+**mojo-agent** — Jarvis itself. Your personal AI, running locally on your hardware. Knows your machines, your files, your workflow, your preferences. Accumulates real context about you over time — context that lives on your hardware and nowhere else. It isn't a technical tool for writing code: it's a first mate. It sits between you and the frontier models — Claude, GPT, whatever is best — orchestrating them on your behalf, delegating tasks to them, and stripping your private context before anything leaves your machine. You get access to the best AI in the world without handing your life to it.
 
-**MojOS** — NixOS rebuilt around the agent from the ground up. The agent isn't a feature bolted on — it's the primary interface. The OS is designed around it: changes happen in staging, get validated, and only commit once the agent is confident. Full system control. Always safe to undo.
+**MojOS** — NixOS rebuilt around the agent from the ground up. The agent isn't a feature bolted on — it's built in from the start. The OS is designed around it: changes happen in staging, get validated, and only commit once the agent is confident. Full system control. Always safe to undo.
 
 **The Circus** — the infrastructure layer that connects your machines into one system. Your agent follows you across devices as one coherent intelligence, not a separate instance on each machine.
+
+**Collectives** — the group itself, made a first-class system. Detailed below.
+
+---
+
+## How this gets built
+
+Mojo is designed the way an operating system is designed, not improvised by
+wrapping existing AI tools together. Before any code ships, the system itself
+gets defined: the **Mojo System Interface** — a POSIX-style standards
+document, worked out piece by piece and checked against real precedent (Unix,
+seL4, Plan 9, Erlang/OTP) before anything gets built against it. The thinking
+behind this is public, in the [mojo](https://github.com/mojo-labs-circus/mojo)
+repo.
+
+---
+
+## Collectives
+
+Right now, when people work together, each person brings their own separate AI
+tool, and coordination happens despite that fragmentation, not through it.
+Collectives makes the group itself — people and their AIs together — one
+coherent system: shared goals, explicit structure, AI as a full participant
+with real standing, always accountable back to a person.
+
+This isn't just a product idea. A real, converging body of academic work —
+Hybrid Intelligence, Hybrid Intelligence Teams, COHUMAIN, and legal theory on
+treating human-AI "hybrids" as their own accountable entity — has been arguing
+the group is the right unit of analysis since 2019. Nobody's built the system
+that treats it as one. That's what Collectives is. Full lineage in
+[collective-intelligence-research.md](https://github.com/mojo-labs-circus/mojo/blob/main/collective-intelligence-research.md).
 
 ---
 
@@ -39,7 +77,7 @@ MojOS and mojo-agent, designed and built together. An AI with full system contro
 The same agent, coherent across all your machines. Your hardware stops being islands.
 
 **Phase 3 — Collectives**
-Groups of humans, each with their own agent, constituting a formal collective: shared infrastructure, shared goals, AI coordinating across the group as a first-class participant.
+Groups of people, each with their own agent, constituting a formal collective: shared infrastructure, shared goals, AI coordinating across the group as a first-class participant.
 
 ---
 
@@ -55,12 +93,11 @@ If you find this interesting — whether you want to contribute, collaborate, or
 
 | Repo | Purpose |
 |---|---|
+| [mojo](https://github.com/mojo-labs-circus/mojo) | The thinking — vision, philosophy, the Mojo System Interface |
 | [mojos](https://github.com/mojo-labs-circus/mojos) | MojOS — the OS |
-| [mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) | The agent |
+| [mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) | Jarvis — the agent |
 | [dotfiles](https://github.com/mojo-labs-circus/dotfiles) | System dotfiles, deployed by MojOS |
 | [ringmaster](https://github.com/mojo-labs-circus/ringmaster) | Early R&D — superseded by mojo-agent |
-
-The thinking behind everything is in the [mojo](https://github.com/mojo-labs-circus/mojo) repo.
 
 ---
 
