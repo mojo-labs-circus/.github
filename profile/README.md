@@ -1,10 +1,14 @@
 # mojo-labs
 
-**Mojo is the sovereign layer beneath your AI, not the agent itself. It's
-Jarvis: your memory and your permissions, yours alone, carried into whatever
-agent or model is actually doing the thinking — swap either and nothing
-moves. Scales from one machine, to your fleet, to Collectives of people and
-AIs working together.**
+**Give everyone a persistent AI identity that's genuinely theirs — a Jarvis —
+by refusing to let any single product weld together the pieces an AI system is
+actually made of. The lock-in that matters was never "can I read the code";
+it's "can I leave with what I've built up." So the actual work is a standard:
+the contract at every seam, adopting the industry's real answers where they
+exist, building the one piece nobody with the resources has any incentive to
+build — and keeping everything else swappable through those contracts,
+permanently. Success isn't Mojo's own implementation winning. It's the idea
+winning.**
 
 ## A vision of the future
 
@@ -12,7 +16,7 @@ This is how I think the future should look: every person has an AI that is genui
 
 That AI gives them capabilities that only technical people have access to right now. It controls their machines, manages their files, automates the things they don't want to think about, and acts as a proxy to the best AI models in the world — delegating the heavy lifting while keeping their private context on their own hardware. It follows them across every device they own as one coherent intelligence.
 
-mojo-labs is an effort to build that.
+mojo-labs is an effort to make that possible.
 
 ---
 
@@ -20,11 +24,43 @@ mojo-labs is an effort to build that.
 
 **The capability gap.** The tools that make computers genuinely powerful — Linux, version control, system configuration, scripting, automation — are only accessible to people who spent years learning them. Technical users have an enormous advantage over everyone else, and AI is widening that gap: the people who already know these tools can use AI to go faster. Everyone else still clicks through menus. The agent closes that gap — full system capability, through conversation, no expertise required.
 
-**Sovereignty.** Compute has centralised twice. Mainframes sat in institutions until the PC decentralised it. Then the cloud came with better UX as the bribe, and people handed back their data, their compute, their sovereignty without noticing. AI is the same inflection point. Every major assistant today routes through someone's cloud, learns from your data, and answers to a company whose incentives are not yours. Data is power — whoever holds the picture of who you are has power over you. The only real answer is ownership.
+**Sovereignty.** Compute has centralised twice. Mainframes sat in institutions until the PC decentralised it. Then the cloud came with better UX as the bribe, and people handed back their data, their compute, their sovereignty without noticing. AI is the same inflection point. Every major assistant today routes through someone's cloud, learns from your data, and answers to a company whose incentives are not yours. Data is power — whoever holds the picture of who you are has power over you. The only real answer is ownership — and ownership has a second half: a fully open-source, self-hosted assistant still traps you if your accumulated memory sits in its private format. Sovereignty is ownership plus portability. Either one alone is branding.
 
 **Context.** Every AI conversation starts from zero. You re-explain who you are, what you're working on, what you've already figured out — every single time. There's no persistent picture of you. A real personal AI fixes this: it carries your context permanently, across every device, and uses it to actually understand you rather than asking you to repeat yourself.
 
 **Fragmentation.** When people work together today, each person brings their own separate AI tool, and coordination happens despite that, not through it. There's no shared system — just individuals, each with their own assistant, hoping it adds up.
+
+---
+
+## What Mojo actually is
+
+A standard, first: the **Mojo System Interface** — effectively Mojo's own
+POSIX. It defines the contract at every seam a complete personal AI system is
+made of, built the way POSIX is built: primitives that hold, schemas
+describing the shape of what's built from them, contracts describing the
+seams between parts.
+
+The standard doesn't invent what already exists. Where the industry has a
+real, working answer, it's adopted — MCP for tools, SKILL.md for skills, the
+already-agnostic model APIs. Where the market should compete — how an agent
+plans, how it thinks — the inside is deliberately left open. What gets defined
+is only what nothing existing covers: the portable shape of memory and
+identity, and the enforcement boundary that protects it. Those are also the
+two pieces mojo-labs builds itself — the first kernel and the first memory
+implementation — because they're the seams nobody with the resources to build
+them has any incentive to build: a neutral standard removes the moat.
+
+Every piece Mojo builds is designed to be outcompeted through the same
+contracts it publishes. A better kernel, a better memory implementation,
+speaking the same standard, replacing Mojo's own — that's the standard
+working, not losing. This is the same move that grew Linux: good interfaces,
+and an ecosystem nobody owns.
+
+The first Mojo system is a distro in the honest sense — assembled from
+existing parts that already speak the adopted standards, around the kernel and
+memory that make them one system. That's the proof, not a shortcut: every seam
+in the standard gets tested by whether something real, built by someone who
+never heard of Mojo, actually plugs into it.
 
 ---
 
@@ -39,8 +75,6 @@ GPT, whatever is best — hiring them for a task at a time and stripping your
 private context before anything leaves your machine. You get access to the
 best AI in the world without handing it your life.
 
-[mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) is one reference
-agent Mojo can run — not the only one, and not what Jarvis actually is.
 Anything that speaks the standard can plug in and pick up the same identity,
 the same memory, the same permissions, on any machine you own.
 
@@ -59,7 +93,7 @@ for when other people are around.
 
 Right now, when people work together, each person brings their own separate AI tool, and coordination happens despite that fragmentation, not through it. Collectives makes the group itself — people and their AIs together — one coherent system: shared goals, explicit structure, AI as a full participant with real standing, always accountable back to a person.
 
-This isn't just a product idea. A real, converging body of academic work — Hybrid Intelligence, Hybrid Intelligence Teams, COHUMAIN, and legal theory on treating human-AI "hybrids" as their own accountable entity — has been arguing the group is the right unit of analysis since 2019. Nobody's built the system that treats it as one. That's what Collectives is. Full lineage in [collective-intelligence-research.md](https://github.com/mojo-labs-circus/mojo/blob/main/collective-intelligence-research.md).
+This isn't just a product idea. A real, converging body of academic work — Hybrid Intelligence, Hybrid Intelligence Teams, COHUMAIN, and legal theory on treating human-AI "hybrids" as their own accountable entity — has been arguing the group is the right unit of analysis since 2019. Nobody's built the system that treats it as one. Collectives is aimed at deliberately second: if the individual-sovereignty primitives are right, the group case is an extension of them, not a new system. Full lineage in [collective-intelligence-research.md](https://github.com/mojo-labs-circus/mojo/blob/main/collective-intelligence-research.md).
 
 ---
 
@@ -67,11 +101,12 @@ This isn't just a product idea. A real, converging body of academic work — Hyb
 
 Mojo is designed the way an operating system is designed, not improvised by
 wrapping existing AI tools together. Before any code ships, the system itself
-gets defined: the **Mojo System Interface** — effectively Mojo's own
-POSIX — worked out piece by piece and checked against real precedent (Unix,
-seL4, Plan 9, Erlang/OTP) before anything gets built against it. The thinking
-behind this is public, in the [mojo](https://github.com/mojo-labs-circus/mojo)
-repo.
+gets defined: the Mojo System Interface, worked out piece by piece and checked
+against real precedent (Unix, seL4, Plan 9, Erlang/OTP) before anything gets
+built against it — and then proven by a running system assembled from as many
+existing parts as possible, because a standard earns authority from running
+code, never from being declared. The thinking behind all of it is public, in
+the [mojo](https://github.com/mojo-labs-circus/mojo) repo.
 
 ---
 
@@ -81,8 +116,9 @@ repo.
 piece by piece, checked against real precedent. No running software yet — a
 deliberate tradeoff, not an oversight.
 
-**Next — Mojo, Mk1.** Built against that standard, dogfooded as a daily
-driver, across however many machines exist.
+**Next — Mojo, Mk1.** The first system: existing compliant parts stitched
+around Mojo's own kernel and memory, dogfooded as a daily driver, across
+however many machines exist.
 
 **Then — iterate.** Chartering (borrowing more compute than you own, without
 giving up sovereignty over what it's shown) and Collectives get built out
@@ -91,9 +127,18 @@ deeper as the system matures. The full detail lives in
 
 ---
 
-## Where this is at
+## Who's building this
 
-This is one person — early in their career, first-year CS — who has a clear picture of how the future should look and is building toward it. The vision is bigger than the current ability to implement it. That's deliberate: build toward the right thing even if it takes time, rather than build the wrong thing fast.
+One person, and honesty about that is part of the design. I've just finished
+the first year of a CS degree. This is a personal, hands-on learning
+experiment, done in the open — the same register Linux was announced in:
+"just a hobby, won't be big and professional." I believe this is what AI
+actually needs — interoperability is what makes sovereignty real instead of
+branding — and I don't believe I can deliver the whole of it alone, or now.
+I can build the seed: the first version of the standard, the first kernel,
+the first memory implementation, the first stitched-together system. The
+thing it should become — better implementations than mine, an ecosystem — is
+not a solo project, definitionally. It's designed so that's an invitation.
 
 If you find this interesting — whether you want to contribute, collaborate, or just talk about the ideas — reach out: [clarkehines@icloud.com](mailto:clarkehines@icloud.com)
 
@@ -105,9 +150,9 @@ If you find this interesting — whether you want to contribute, collaborate, or
 |---|---|
 | [mojo](https://github.com/mojo-labs-circus/mojo) | The thinking — vision, philosophy, the Mojo System Interface |
 | [mojos](https://github.com/mojo-labs-circus/mojos) | MojOS — the OS |
-| [mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) | A reference agent for Mojo — one candidate, not the only one |
+| [mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) | Agent-side experiments — the first system aims to adopt existing harnesses, not build one |
 | [dotfiles](https://github.com/mojo-labs-circus/dotfiles) | System dotfiles, deployed by MojOS |
-| [ringmaster](https://github.com/mojo-labs-circus/ringmaster) | Early R&D — superseded by mojo-agent |
+| [ringmaster](https://github.com/mojo-labs-circus/ringmaster) | Early R&D — superseded |
 
 ---
 
@@ -122,5 +167,7 @@ Full philosophy, with the reasoning behind each:
 [philosophy.md](https://github.com/mojo-labs-circus/mojo/blob/main/philosophy.md).
 
 ---
+
+*The world can get its mojo back.*
 
 Code: [AGPL-3.0](https://github.com/mojo-labs-circus/mojos/blob/main/LICENSE) · Docs: [CC BY-SA 4.0](https://github.com/mojo-labs-circus/mojo/blob/main/LICENSE)
