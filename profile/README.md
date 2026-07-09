@@ -31,17 +31,13 @@ mojo-labs is an effort to build that.
 
 Your personal AI, running locally on your hardware. Knows your machines, your files, your workflow, your preferences. Accumulates real context about you over time — context that lives on your hardware and nowhere else. It isn't a technical tool for writing code: it's a first mate. It sits between you and the frontier models — Claude, GPT, whatever is best — orchestrating them on your behalf, delegating tasks to them, and stripping your private context before anything leaves your machine. You get access to the best AI in the world without handing your life to it.
 
-It has computer use: it can see the screen, drive applications, manage files, install packages, and control the desktop.
+It has computer use: it can see the screen, drive applications, manage files, install packages, and control the desktop. And it follows you across every device you own as one coherent intelligence — your fleet, not a separate instance per machine.
 
 ## MojOS — the OS
 
 NixOS rebuilt around the agent from the ground up. The agent isn't a feature bolted on — it's built in from the start. The entire system is declared in one flake; every change happens in staging, gets validated, and only commits once the agent is confident. Full system control that can't quietly break your machine.
 
 It's also a workshop with moods: switchable modes that change how the system looks, behaves, and how much of it shows — a dense coding mode, a warm creative mode, a plain-looking mode for when other people are around.
-
-## The Circus — one intelligence across your machines
-
-Your agent follows you across devices as one coherent intelligence, not a separate instance on each machine. The infrastructure layer that connects your machines into one system, so your hardware stops being islands.
 
 ## Collectives
 
@@ -65,18 +61,21 @@ repo.
 
 ## Roadmap
 
-**Now — defining the Mojo System Interface.** Before either MojOS or
-mojo-agent gets built, the system itself gets defined properly, piece by
-piece, checked against real precedent. No running software yet — a deliberate
-tradeoff, not an oversight.
+Three stages, not a list of separate projects: define the Mojo System
+Interface, build Mojo (Mk1) against it, then iterate. Multi-machine use,
+chartering, and Collectives aren't things bolted on after Mojo exists — they're
+capabilities of the one system, realized as it matures through iteration.
 
-**Next — Mk1, built and lived with.** MojOS and mojo-agent, built together
-against that standard, dogfooded as a daily driver.
+**Now — the Mojo System Interface, Mk1.** The system itself, defined properly,
+piece by piece, checked against real precedent. No running software yet — a
+deliberate tradeoff, not an oversight.
 
-**Horizon.** The Circus, once there's more than one machine to connect.
-Chartering — borrowing more compute than you own, without ever giving up
-sovereignty over what it's shown. Collectives, once the individual layer is
-real. The full detail lives in
+**Next — Mojo, Mk1.** Built against that standard, dogfooded as a daily
+driver, across however many machines exist.
+
+**Then — iterate.** Chartering (borrowing more compute than you own, without
+giving up sovereignty over what it's shown) and Collectives get built out
+deeper as the system matures. The full detail lives in
 [roadmap.md](https://github.com/mojo-labs-circus/mojo/blob/main/roadmap.md).
 
 ---
