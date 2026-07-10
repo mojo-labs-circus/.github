@@ -5,7 +5,7 @@ by refusing to let any single product weld together the pieces an AI system is
 actually made of. The lock-in that matters was never "can I read the code";
 it's "can I leave with what I've built up." So the actual work is a standard:
 the contract at every seam, adopting the industry's real answers where they
-exist, building the one piece nobody with the resources has any incentive to
+exist, building the two pieces nobody with the resources has any incentive to
 build — and keeping everything else swappable through those contracts,
 permanently. Success isn't Mojo's own implementation winning. It's the idea
 winning.**
@@ -34,21 +34,24 @@ mojo-labs is an effort to make that possible.
 
 ## What Mojo actually is
 
-A standard, first: the **Mojo System Interface** — effectively Mojo's own
-POSIX. It defines the contract at every seam a complete personal AI system is
-made of, built the way POSIX is built: primitives that hold, schemas
-describing the shape of what's built from them, contracts describing the
-seams between parts.
+A standard, first: the **Mojo System Interface** — effectively a POSIX for
+personal AI. It defines every piece a complete personal AI system is made of
+and every seam between them, so that anyone can build a better implementation
+of any piece and the owner runs whichever they want. The whole system, drawn
+piece by piece and seam by seam, is
+[anatomy.md](https://github.com/mojo-labs-circus/mojo/blob/main/anatomy.md) —
+the most concrete statement of what Mojo is.
 
 The standard doesn't invent what already exists. Where the industry has a
 real, working answer, it's adopted — MCP for tools, SKILL.md for skills, the
-already-agnostic model APIs. Where the market should compete — how an agent
-plans, how it thinks — the inside is deliberately left open. What gets defined
-is only what nothing existing covers: the portable shape of memory and
-identity, and the enforcement boundary that protects it. Those are also the
-two pieces mojo-labs builds itself — the first kernel and the first memory
-implementation — because they're the seams nobody with the resources to build
-them has any incentive to build: a neutral standard removes the moat.
+already-converged model wire format, A2A for talking to agents outside your
+system. Where the market should compete — how an agent runtime plans, how it
+thinks — the inside is deliberately left open. What gets defined is only what
+nothing existing covers: the portable shape of the identity data, and the
+enforcement boundary that protects it. Those are also the two pieces
+mojo-labs builds itself — the first kernel and the first memory layer —
+because they're the seams nobody with the resources to build them has any
+incentive to build: a neutral standard removes the moat.
 
 Every piece Mojo builds is designed to be outcompeted through the same
 contracts it publishes. A better kernel, a better memory implementation,
@@ -58,32 +61,37 @@ and an ecosystem nobody owns.
 
 The first Mojo system is a distro in the honest sense — assembled from
 existing parts that already speak the adopted standards, around the kernel and
-memory that make them one system. That's the proof, not a shortcut: every seam
-in the standard gets tested by whether something real, built by someone who
-never heard of Mojo, actually plugs into it.
+memory layer that make them one system. That's the proof, not a shortcut:
+every seam in the standard gets tested by whether something real, built by
+someone who never heard of Mojo, actually plugs into it.
 
 ---
 
-## Jarvis — the first mate
+## Jarvis — the identity
 
-Jarvis is Mojo's core claim, not a specific piece of software: a persistent AI
-identity — memory and permissions — that lives on your own hardware and gets
-handed fresh to whatever agent or model is actually doing the thinking. Swap
-the agent, swap the model, and Jarvis doesn't move: nothing that matters ever
-lived inside either one. It sits between you and the frontier models — Claude,
-GPT, whatever is best — hiring them for a task at a time and stripping your
-private context before anything leaves your machine. You get access to the
-best AI in the world without handing it your life.
+Jarvis is Mojo's core claim, not a specific piece of software. The identity is
+data: your AI's memory of you, its persona, your policies and permissions —
+plain portable files that live on your own hardware and get handed fresh to
+whatever agent runtime or model is actually doing the thinking. Swap the
+agent, swap the model, and nothing that matters moves: the character you know
+is built on data that never lived inside either one. The system sits between
+you and the frontier models — Claude, GPT, whatever is best — hiring them for
+a task at a time and stripping your private context before anything leaves
+your machine. You get access to the best AI in the world without handing it
+your life.
 
 Anything that speaks the standard can plug in and pick up the same identity,
 the same memory, the same permissions, on any machine you own.
 
 ## MojOS — the OS
 
-Mojo runs on any Unix system — that reach is the point. MojOS is the deepest
-host: NixOS plus Mojo's own opinionated defaults, the whole machine
-declarative and always safe to undo, every change staged and validated
-before it commits. Best home, not a requirement.
+Mojo runs on any Linux distribution — that's a design constraint of the
+standard, not a preference. MojOS is personal, not central: the OS I run
+myself — NixOS plus the defaults that make a machine running this system
+nicer to live on, the whole machine declarative and always safe to roll
+back. Nothing in Mojo requires it; it's offered because the same defaults
+that help me will probably help anyone doing the same thing. Best home,
+never a requirement.
 
 It's also a workshop with its own personality: modes that change how the
 system looks and feels — dense and technical for deep work, plain and quiet
@@ -91,9 +99,19 @@ for when other people are around.
 
 ## Collectives
 
-Right now, when people work together, each person brings their own separate AI tool, and coordination happens despite that fragmentation, not through it. Collectives makes the group itself — people and their AIs together — one coherent system: shared goals, explicit structure, AI as a full participant with real standing, always accountable back to a person.
+A bet the primitives have to earn, not a feature on a list: if the
+individual-sovereignty primitives are right, the same structure that holds one
+person and their machines should hold several people sharing a system — a
+team, a family, a community — each member still sovereign, AI as a full
+participant with real standing, always accountable back to a person.
 
-This isn't just a product idea. A real, converging body of academic work — Hybrid Intelligence, Hybrid Intelligence Teams, COHUMAIN, and legal theory on treating human-AI "hybrids" as their own accountable entity — has been arguing the group is the right unit of analysis since 2019. Nobody's built the system that treats it as one. Collectives is aimed at deliberately second: if the individual-sovereignty primitives are right, the group case is an extension of them, not a new system. Full lineage in [collective-intelligence-research.md](https://github.com/mojo-labs-circus/mojo/blob/main/collective-intelligence-research.md).
+A real, converging body of academic work — Hybrid Intelligence, Hybrid
+Intelligence Teams, COHUMAIN, and legal theory on treating human-AI "hybrids"
+as their own accountable entity — has been arguing the group is the right unit
+of analysis since 2019. Nobody's built the system that treats it as one.
+Deliberately second: reached only once the single-owner system is real. Full
+lineage in
+[collective-intelligence-research.md](https://github.com/mojo-labs-circus/mojo/blob/main/collective-intelligence-research.md).
 
 ---
 
@@ -101,26 +119,30 @@ This isn't just a product idea. A real, converging body of academic work — Hyb
 
 Mojo is designed the way an operating system is designed, not improvised by
 wrapping existing AI tools together. Before any code ships, the system itself
-gets defined: the Mojo System Interface, worked out piece by piece and checked
-against real precedent (Unix, seL4, Plan 9, Erlang/OTP) before anything gets
-built against it — and then proven by a running system assembled from as many
-existing parts as possible, because a standard earns authority from running
-code, never from being declared. The thinking behind all of it is public, in
-the [mojo](https://github.com/mojo-labs-circus/mojo) repo.
+gets defined: the anatomy first —
+[anatomy.md](https://github.com/mojo-labs-circus/mojo/blob/main/anatomy.md),
+every piece and seam of the whole system — then the Mojo System Interface,
+worked out seam by seam and checked against real precedent (Unix, seL4,
+Plan 9, Erlang/OTP) before anything gets built against it — and then proven by
+a running system assembled from as many existing parts as possible, because a
+standard earns authority from running code, never from being declared. The
+thinking behind all of it is public, in the
+[mojo](https://github.com/mojo-labs-circus/mojo) repo.
 
 ---
 
 ## Roadmap
 
-**Now — the Mojo System Interface, Mk1.** The system itself, defined properly,
-piece by piece, checked against real precedent. No running software yet — a
-deliberate tradeoff, not an oversight.
+**Now — the anatomy, then the Mojo System Interface, Mk1.** The whole system
+mapped first, then the standard derived from it seam by seam, checked against
+real precedent. No running software yet — a deliberate tradeoff, not an
+oversight.
 
 **Next — Mojo, Mk1.** The first system: existing compliant parts stitched
-around Mojo's own kernel and memory, dogfooded as a daily driver, across
+around Mojo's own kernel and memory layer, dogfooded as a daily driver, across
 however many machines exist.
 
-**Then — iterate.** Chartering (borrowing more compute than you own, without
+**Then — iterate.** Renting compute (borrowing more than you own, without
 giving up sovereignty over what it's shown) and Collectives get built out
 deeper as the system matures. The full detail lives in
 [roadmap.md](https://github.com/mojo-labs-circus/mojo/blob/main/roadmap.md).
@@ -148,9 +170,9 @@ If you find this interesting — whether you want to contribute, collaborate, or
 
 | Repo | Purpose |
 |---|---|
-| [mojo](https://github.com/mojo-labs-circus/mojo) | The thinking — vision, philosophy, the Mojo System Interface |
+| [mojo](https://github.com/mojo-labs-circus/mojo) | The thinking — the anatomy, vision, philosophy, the Mojo System Interface |
 | [mojos](https://github.com/mojo-labs-circus/mojos) | MojOS — the OS |
-| [mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) | Agent-side experiments — the first system aims to adopt existing harnesses, not build one |
+| [mojo-agent](https://github.com/mojo-labs-circus/mojo-agent) | Agent-side experiments — the first system aims to adopt existing runtimes, not build one |
 | [dotfiles](https://github.com/mojo-labs-circus/dotfiles) | System dotfiles, deployed by MojOS |
 | [ringmaster](https://github.com/mojo-labs-circus/ringmaster) | Early R&D — superseded |
 
