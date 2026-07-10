@@ -83,15 +83,19 @@ your life.
 Anything that speaks the standard can plug in and pick up the same identity,
 the same memory, the same permissions, on any machine you own.
 
-## MojOS — the OS
+## Nix, and MojOS — the OS
 
 Mojo runs on any Linux distribution — that's a design constraint of the
-standard, not a preference. MojOS is personal, not central: the OS I run
-myself — NixOS plus the defaults that make a machine running this system
-nicer to live on, the whole machine declarative and always safe to roll
-back. Nothing in Mojo requires it; it's offered because the same defaults
-that help me will probably help anyone doing the same thing. Best home,
-never a requirement.
+standard, not a preference. Nix — the package manager, which runs on any
+distro, no NixOS required — is how the first system gets assembled and
+deployed: parts pinned, installs reproducible, upgrades always safe to roll
+back. The standard never requires Nix; the first system ships with it.
+
+MojOS is that idea taken to the whole machine, and it's personal, not
+central: the OS I run myself — NixOS plus the defaults that make a machine
+running this system nicer to live on. Nothing in Mojo requires it; it's
+offered because the same defaults that help me will probably help anyone
+doing the same thing. Best home, never a requirement.
 
 It's also a workshop with its own personality: modes that change how the
 system looks and feels — dense and technical for deep work, plain and quiet
@@ -140,7 +144,10 @@ oversight.
 
 **Next — Mojo, Mk1.** The first system: existing compliant parts stitched
 around Mojo's own kernel and memory layer, dogfooded as a daily driver, across
-however many machines exist.
+however many machines exist. The milestone ends public, not private: the MSI
+draft and a release a stranger can actually stand up, posted online — to make
+the case that this is the way forward, and to invite people to make the MSI
+better and build implementations of their own.
 
 **Then — iterate.** Renting compute (borrowing more than you own, without
 giving up sovereignty over what it's shown) and Collectives get built out
