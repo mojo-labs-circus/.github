@@ -1,10 +1,11 @@
 # mojo-labs
 
 **Personal AI is heading somewhere specific: always-on systems that remember
-you, act for you, and follow you across every machine you own. A Jarvis. Every
-product building one today welds it together as a monolith, and the piece that
-matters most, the accumulated picture of you, is trapped inside. mojo-labs
-exists to make Jarvis-style systems interoperable instead: a standard for the
+you, act for you, and follow you across every machine you own. A digital
+counterpart. Every product building one today welds it together as a
+monolith, and the piece that matters most, the accumulated picture of you, is
+trapped inside. mojo-labs exists to make digital counterparts interoperable
+instead: a standard for the
 pieces and the seams between them, so the open-source community can build these
 the way it built Linux. Every piece competing and improving independently, no
 lock-in, local and sovereign if you want it, and your data yours no matter what
@@ -37,7 +38,7 @@ this org exists to fill.
 ## What Mojo is
 
 A standard, first: the **Mojo System Interface (MSI)**, effectively a POSIX
-for personal AI. It defines every piece a complete Jarvis-style system is made
+for personal AI. It defines every piece a complete digital counterpart is made
 of and every seam between them, so that anyone can build a better
 implementation of any piece and the owner runs whichever they want. The whole
 system, drawn piece by piece and seam by seam, is
@@ -50,8 +51,8 @@ your policies and permissions: plain portable files on your own hardware,
 handed fresh to whatever agent runtime or model is actually doing the
 thinking. Swap the agent, swap the model, and nothing that matters moves. The
 assistant you know is built on data that never lived inside either one. That's
-the Jarvis claim, and it's the falsifiable core of the whole project: if
-identity doesn't survive the swap, Mojo has failed.
+the digital counterpart claim, and it's the falsifiable core of the whole
+project: if identity doesn't survive the swap, Mojo has failed.
 
 The standard doesn't invent what already exists. Where the industry has a real
 answer, it's adopted. Where the market should compete (how an agent runtime
@@ -123,7 +124,7 @@ where people can pick it apart.
 **Then: iterate in the open.** The standard and the system versioned together
 as real use teaches what the first pass got wrong. Renting compute without
 giving up sovereignty over what it's shown. And one experiment we're honest
-about: once one Jarvis-style system is real, whether several of them can form
+about: once one digital counterpart is real, whether several of them can form
 a group (a family, a team) without any member giving up what's theirs. We
 think the primitives will support it. We won't claim it until we've tested it.
 Full detail in
