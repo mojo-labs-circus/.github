@@ -8,7 +8,8 @@ exists to make Jarvis-style systems interoperable instead: a standard for the
 pieces and the seams between them, so the open-source community can build these
 the way it built Linux. Every piece competing and improving independently, no
 lock-in, local and sovereign if you want it, and your data yours no matter what
-you swap. Success isn't our implementation winning. It's the idea winning.**
+you swap. Success isn't our implementation winning. It's the idea winning, and
+if a better standard than ours is how it wins, that counts too.**
 
 ---
 
@@ -63,7 +64,26 @@ itself, because they're exactly the ones nobody with the resources has any
 incentive to build: a neutral standard removes the moat. Every piece we build
 is designed to be outcompeted through the same contracts it publishes. A
 better kernel or memory layer replacing ours is the standard working, not
-losing.
+losing. A better standard replacing MSI itself would be too. It doesn't
+matter whose name is on it, only that it exists.
+
+## Why this instead of a monolith
+
+Every builder in this space is currently forced to also build the parts they
+don't actually care about. An agent-runtime builder ends up building
+identity, memory, and permissions too, because there's nothing to plug into.
+A memory-provider builder faces an N runtimes times M providers integration
+matrix that punishes everyone but the biggest player. MSI turns both into one
+shared contract: build the piece you're actually good at, and get access to
+everyone else who speaks the same seam. Model vendors keep getting hired as
+the best model for the job in every compliant system, the way AWS profits
+enormously from Linux without owning it. Enterprises get what procurement
+already needs and today can't get: portable context that isn't a
+switching-cost trap, and an audit trail that answers "what did our AI do and
+who allowed it." Open source gets eleven real seams to build into instead of
+one project to fork and abandon. A vertical market, where whoever welds the
+most together first wins the user, becomes a horizontal one, where whoever
+builds the best version of one piece wins that layer.
 
 ## How this gets built
 
