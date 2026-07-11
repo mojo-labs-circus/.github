@@ -162,10 +162,21 @@ just talk about the ideas, reach out:
 
 ## Philosophy
 
-Sovereignty as an axiom, not a feature. Open source by necessity: the only way
-"this is yours" is credible. Privacy by architecture, not policy. And
-technical users are the start, not the destination. The system exists to lower
-that barrier over time, not keep it high.
+Sovereignty as an axiom, not a feature: the test at any point in the system
+is "who owns this data," and if the answer is unclear, the design is wrong.
+The standard itself doesn't mandate open source or local-only, the same way
+POSIX allowed proprietary Unixes. It requires exactly one thing: identity
+data stays in the portable shape, so nobody gets trapped. My own
+implementation goes further by choice, not by requirement, open to the bone
+and local by default, because a sovereignty claim is only credible if it can
+be verified rather than promised. Privacy by architecture, not policy.
+
+And built to lose on purpose. Every piece here, including the standard
+itself, exists to be outcompeted: if someone builds a better kernel, a
+better memory layer, even a better standard than the MSI, that's the idea
+winning, not mojo-labs losing. Wanting credit and wanting the thing to exist
+pull apart the moment they conflict, and this project already knows which
+one it picks.
 
 Full philosophy, with the reasoning behind each:
 [philosophy.md](https://github.com/mojo-labs-circus/mojo/blob/main/philosophy.md).
